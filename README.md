@@ -136,7 +136,7 @@ Um gráfico de barras é reiteradamente adequado para saber a quantidade de derr
 
 É vísivel que os times que mais venceram no campeonato como o Manchester City, Liverpool e Chelsea, foram logicamente os times que menos perderam durante o torneio, já os times que mais contabilizaram derrotas como o Norwich e o Watford foram os times que também foram rebaixados para a segunda divisão da Premier League.
 
-No entanto, curiosamente o Burnley foi o oitavo time com mais derrotas acumulados, e mesmo assim foi um dos três times rebaixados para a segunda divisão, ou seja, Burnley foi um dos times com menos derrotas contabilizadas, mas também foi um dos times com menos vitórias e com mais empates acumulados, isto significa que seus adversários que contabilizaram mais derrotas, empataram menos e venceram mais jogos do que o Burnley para coloca-lo para a segunda divisão.
+No entanto, curiosamente o Burnley foi o oitavo time com mais derrotas acumulados, e mesmo assim foi um dos três times rebaixados para a segunda divisão, ou seja, Burnley foi um dos times com menos derrotas contabilizadas, mas também foi um dos times com menos vitórias e com mais empates acumulados, isto significa que seus adversários que contabilizaram mais derrotas, empataram menos e venceram mais jogos do que o Burnley para coloca-lo na segunda divisão.
 
 Tal informação acima demonstra que não basta vencer mais para vencer o campeonato ou que basta perder menos para evitar o rebaixamento, a combinação da quantidade de vitórias, derrotas e empates será matematicamente crucial para determinar qual time será o campeão ou quais times serão rebaixados.
 
@@ -149,3 +149,11 @@ Para responder tal questão, contabilizei a quantidade de empates de times manda
 Mais uma vez, usei o gráfico de barras para resolver tal problema, justamente por tal gráfico ser o mais recomendável para responder esse tipo de pergunta:
 
 ![](./img/grafico_5.png)
+
+Chelsea foi um dos cinco times que mais empataram no campeonato, e por essa quantidade de empates, mesmo que o time tivesse tido uma quantidade de vitórias minimamente inferior do que Arsenal e Tottenham, o Chelsea conseguiu terminar o torneio como um dos três melhores times da temporada.
+
+Em contrapartida, como já foi dito, o Burnley foi um dos times que mais foi derrotado e que mais teve empates no torneio, porém por ter sido um dos times com menos vitórias, conseguiu ser rebaixado por outros times que mesmo que tivessem mais derrotas e menos empates, ultrapassaram-o por ter mais vitórias.
+
+Concluída a séries de perguntas e resposta em relação a quantidade de vitórias, derrotas e empates dos times, irei retornar às questões relativas aos times mandantes e visitantes do campeonato:
+
+#### **(5)** No campeonato como um todo, houve mais gols marcados por times mandantes ou por times visitantes?

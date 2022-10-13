@@ -58,7 +58,7 @@ df.date = df.date.astype('datetime64[ns]')
 
 ## **(2)** Exploração dos dados:
 
-Após a fase de limpeza e tratamento dos dados, criei duas novas colunas na tabela, a primeira coluna representava a quantidade de gols totais registrados por partida e a segunda coluna representava a soma acumulativa de gols durante o campeonato até determinada partida.
+Após a fase de limpeza e tratamento dos dados, criei duas novas colunas na tabela, a primeira coluna representava a quantidade de gols totais registrados por partida e a segunda coluna representava a soma acumulativa de gols durante o campeonato até a última partida.
 
 ```
 df = df.assign(total_goals = df['home_goals'] + df['away_goals'],
@@ -69,15 +69,15 @@ Concluída a fase de pré-análise em que os dados foram limpados e tratados, in
 
 #### **(1)** Durante o campeonato todo, houve mais registros de vitórias de times mandantes ou visitantes? E qual foi a quantidade de empates contabilizados?
 
-Basicamente, no meio futebolístico há uma tendência popular na crença dos torcedores de que os times mandantes apresentam mais probabilidade de vencerem os jogos do que os times visitantes, em defluência de que os **(a)** times mandantes estão mais acostumados à jogar em seus próprios estádios do que os times visitantes, e também **(2)** os times mandantes tendem à receber mais apoio e incentivo dos torcedores, e tal incentivo psicologicamente ajuda os jogadores do time da casa à terem mais confiança para o jogo, em contrapartida à desaprovação e a vaia constante dos torcedores da casa contra o time visitante geraria um efeito psiquíco nos jogadores visitantes de insegurança e nervosismo para o jogo.
+Basicamente, no meio futebolístico há uma tendência popular na crença dos torcedores de que os times mandantes apresentam mais probabilidade de vencerem os jogos do que os times visitantes, em defluência de que os **(a)** times mandantes estão mais acostumados à jogar em seus próprios estádios do que os times visitantes, e também **(b)** os times mandantes tendem à receber mais apoio e incentivo dos torcedores, e tal incentivo psicologicamente ajuda os jogadores do time da casa à terem mais confiança para o jogo, em contrapartida à desaprovação e a vaia constante dos torcedores da casa contra o time visitante geraria um efeito psiquíco nos jogadores visitantes de insegurança e nervosismo para o jogo.
 
-Para que pudesse ter evidências que corroborassem tal conclusão acima, plotei um gráfico de barra para que uma parte da **(1)** pergunta fosse respondida diretamente:
+Para que pudesse ter evidências que corroborassem tal conclusão acima, plotei um gráfico de barras para que uma parte da **(1)** pergunta fosse respondida diretamente:
 
 ![](./img/grafico_1.png)
 
 O gráfico de barras horizontais acima informa que os times mandantes coletaram mais vitórias em comparação aos times visitantes durante todo o campeonato inglês, precisamente houve o registro de 163 vitórias para os times mandantes dos jogos e 129 vitórias para os times visitantes, ou seja, comparativamente há uma diferença de 39 vitórias de times mandantes em relação aos times visitantes.
 
-Já 88 jogos foram de jogos que resultaram em empate, assim após obter a quantidade de vitórias para times mandantes ou visitantes, junto com a quantidade de empates, trouxe em sequência um gráfico de pizza para responder completamente a **(1)** questão:
+Já os demais 88 jogos foram de jogos que resultaram em empate, assim após obter a quantidade de vitórias para times mandantes ou visitantes, junto com a quantidade de empates, trouxe em sequência um gráfico de pizza para responder completamente a **(1)** questão:
 
 ![](./img/grafico_2.png)
 
@@ -89,5 +89,63 @@ Respondida à questão **(1)**, irei responder às perguntas mais óbvias que te
 
 #### **(2)** Quais foram os times que mais contabilizaram vitórias durante o campeonato?
 
-Para responder tal questão, tive que criar uma coluna que informasse qual time foi o vencedor de cada partida, e consequentemente realizei um agrupamento dos times vencedores pela quantidade de vitórias contabilizada para saber em ordem decrescente quais foram os times que mais venceram e quais foram os times que menos venceram durante todo o campeonato. 
+Para responder tal questão, tive que criar uma coluna que informasse qual time foi o vencedor de cada partida, e consequentemente realizei um agrupamento dos times vencedores pela quantidade de vitórias contabilizadas para saber em ordem decrescente quais foram os times que mais venceram e quais foram os times que menos venceram durante todo o campeonato.
 
+A tabela abaixo traz informações sobre a quantidade de vitórias por time ordenada decrescentemente:
+
+|     winner     | qtd |
+|:--------------:|:---:|
+|    Man City    |  29 |
+|    Liverpool   |  28 |
+|    Tottenham   |  22 |
+|     Arsenal    |  22 |
+|     Chelsea    |  21 |
+|   Man United   |  16 |
+|    West Ham    |  16 |
+|     Wolves     |  15 |
+|    Leicester   |  14 |
+|   Aston Villa  |  13 |
+|    Newcastle   |  13 |
+|    Brentford   |  13 |
+|    Brighton    |  12 |
+| Crystal Palace |  11 |
+|     Everton    |  11 |
+|      Leeds     |  9  |
+|   Southampton  |  9  |
+|     Burnley    |  7  |
+|     Watford    |  6  |
+|     Norwich    |  5  |
+
+Com a tabela acima, plotei um gráfico de barras para expor a quantidade de vitórias por time de modo mais visual e mais fácil de ser entendível por qualquer um que fosse obter tal informação:
+
+![](./img/grafico_3.png)
+
+Como é observável no gráfico acima, Manchester City que foi o time campeão, como expectante, também foi o time que mais obteve vitórias durante o campeonato, já os times que ficaram em posições abaixo do Manchester City na tabela da Premier League tiveram menos vitórias contábeis, Liverpool que foi o vice-campeão, também foi o segundo time com mais vitórias no campeonato.
+
+Chelsea teve menos vitórias contabilizadas em comparação ao Arsenal e ao Tottenham, porém como o Chelsea teve mais empates e menos derrotas do que esses dois times, então o Chelsea teve um término de campeonato em terceiro lugar, na frente do Arsenal e do Tottenham.
+
+Após a **(2)** questão ter sido respondida, poderei explorar mais questões óbvias que qualquer um faria ao analisar tal conjunto de dados:
+
+#### **(3)** Quais foram os times que mais contabilizaram derrotas durante o campeonato?
+
+Novamente, o processo manipulatório para responder tal pergunta foi semelhante ao da questão anterior, criei uma coluna dos times perdedores de cada partida e depois agrupei-os pela quantidade de derrotas que estes times contabilizaram.
+
+Um gráfico de barras é reiteradamente adequado para saber a quantidade de derrotas por cada time:
+
+![](./img/grafico_4.png)
+
+É vísivel que os times que mais venceram no campeonato como o Manchester City, Liverpool e Chelsea, foram logicamente os times que menos perderam durante o torneio, já os times que mais contabilizaram derrotas como o Norwich e o Watford foram os times que também foram rebaixados para a segunda divisão da Premier League.
+
+No entanto, curiosamente o Burnley foi o oitavo time com mais derrotas acumulados, e mesmo assim foi um dos três times rebaixados para a segunda divisão, ou seja, Burnley foi um dos times com menos derrotas contabilizadas, mas também foi um dos times com menos vitórias e com mais empates acumulados, isto significa que seus adversários que contabilizaram mais derrotas, empataram menos e venceram mais jogos do que o Burnley para coloca-lo para a segunda divisão.
+
+Tal informação acima demonstra que não basta vencer mais para vencer o campeonato ou que basta perder menos para evitar o rebaixamento, a combinação da quantidade de vitórias, derrotas e empates será matematicamente crucial para determinar qual time será o campeão ou quais times serão rebaixados.
+
+Respondida às duas questões mais importantes em relação a quantidade de vitórias e derrotas contabilizadas por cada time, tratarei sobre os empates registrados no campeonatos:
+
+#### **(4)** Quais foram os times com mais empates contabilizados durante o campeonato?
+
+Para responder tal questão, contabilizei a quantidade de empates de times mandantes e de times visitantes em tabelas separadas, depois utilizei a função pd.merge() do Pandas para juntar às duas tabelas em uma só, após isto, criei uma coluna com a quantidade de empates dos times ao jogarem como mandantes ou visitantes, e por fim obtive a quantidade total de empates registradas por cada time no campeonato.
+
+Mais uma vez, usei o gráfico de barras para resolver tal problema, justamente por tal gráfico ser o mais recomendável para responder esse tipo de pergunta:
+
+![](./img/grafico_5.png)

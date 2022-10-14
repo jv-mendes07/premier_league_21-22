@@ -157,3 +157,54 @@ Em contrapartida, como já foi dito, o Burnley foi um dos times que mais foi der
 Concluída a séries de perguntas e resposta em relação a quantidade de vitórias, derrotas e empates dos times, irei retornar às questões relativas aos times mandantes e visitantes do campeonato:
 
 #### **(5)** No campeonato como um todo, houve mais gols marcados por times mandantes ou por times visitantes?
+
+Quantitativamente, os times mandantes marcaram 575 gols no total, e os times visitantes em contrapartida marcaram 496 gols no campeonato todo, com uma diferença ínfima de 79 gols entre times mandantes e visitantes.
+
+Percentualmente, é adequado vermos a resposta da questão **(5)** em um gráfico de pizza:
+
+![](./img/grafico_6.png)
+
+Como é vísivel, 53 % ou mais da metade dos gols do campeonato foram marcados por times que jogaram dentro de casa, enquanto 46 % dos gols restantes foram realizados por times visitantes.
+
+Após tal pergunta ser respondida, continuarei à explorar em mais profundidade este tópico relativo a quantidade de gols marcados por times mandantes ou visitantes:
+
+#### **(6)** Qual foi a quantidade de gols marcados por times mandantes e visitantes ao decorrer dos meses? Houve uma tendência de aumento ou de diminuição na quantidade de gols marcados? 
+
+Tal questão é atinente à um problema de série temporal, ou seja, irei ter que saber qual é a tendência de gols dos times mandantes ou visitantes ao decorrer dos meses em que o campeonato foi realizado, para responder tal questão, agrupei os meses pela quantidade de gols marcadas por times mandantes e visitantes em duas tabelas separadas, após isto, plotei um gráfico de linhas com duas linhas que demonstrassem a tendência de aumento ou de diminuição nos gols marcados por times mandantes ou visitantes em relação aos meses do torneio:
+
+![](./img/grafico_7.png)
+
+O gráfico acima informa que durante os meses de Fevereiro até Dezembro, houve uma tendência irregular de aumentos e quedas nos gols marcados por times mandantes e visitantes, porém o gráfico de linhas informa que durante quase todos esses meses, os times que jogaram dentro de casa marcaram e contabilizaram mais gols do que os times que jogaram fora de casa, somente em Setembro e Outubro que os times visitantes tiveram mais gols contábeis em comparação aos times mandantes.
+
+Nessas informações obtidas até o momento, é entendível que times mandantes tiveram mais vitórias e marcaram mais gols do que os times visitantes, porém como saber se há uma tendência correlacional de que times mandantes marquem mais gols do que times visitantes?
+
+#### **(7)** Qual é a correlação entre total de gols na partida e gols marcados por times mandantes e visitantes?
+
+Um gráfico de heatmap responderá a questão **(7)** diretamente:
+
+![](./img/grafico_8.png)
+
+Basicamente, com o método pd.corr() é obtido que a correlação entre gols de times mandantes e gols totais da partida é de 0.65, enquanto a correlação entre gols de times mandantes e gols totais é de 0.60, isto é, redundantemente o aumento de gols de times mandantes ou visitantes é acompanhável com o aumento no total de gols por partida, porém é conspícuo que o aumento de gols dos times mandantes tendem à gerar mais aumentos no total de gols em comparação ao aumento de gols de times visitantes. Assim, é conclusivo estatisticamente que há uma tendência de correlação de que times mandantes marquem mais gols em uma partida do que os times visitantes (com base nas informações do campeonato inglês).
+
+Os próximos tópicos desta análise irão adentrar à questões relativas a qualidade dos ataques e das defesas dos times do campeonato inglês:
+
+#### **(8)** Quais foram os times com os melhores ataques do campeonato inglês?
+
+Basta vermos qual foi a quantidade de gols marcados por cada time que iremos obter a resposta de quais são os times com os ataques mais efetivos de todo o campeonato:
+
+![](./img/grafico_9.png)
+
+Como esperado, os times que terminaram o torneio no topo da tabela foram os times com os ataques mais eficazes da temporada, o campeão Manchester City, o vice-campeão Liverpool e Chelsea são provas suficientes de que os times com mais vitórias, são os times com os melhores ataques e que concluiram o torneio no topo da classificação.
+
+Já os times com menos vitórias e que foram rebaixados para a segunda divisão, também foram os times com os piores ataques do torneio.
+
+Portanto, tais informações somente confirmam nossas intuições prévias sobre o que já esperávamos que fosse verdadeiro.
+
+#### **(9)** Qual é a correlação entre quantidade de gols e quantidade de chutes?
+
+A pergunta **(9)** visa fornecer mais informações sobre às questões respondidas anteriormente, assim iremos saber se há uma correlação positiva entre quantidade de chutes e quantidade de gols. Intuitivamente, qualquer um irá afirmar que o aumento de chutes de um time contra o gol do time adversário é acompanhável com o aumento de gols marcados, porém precisamos de uma comprovação estatística com base em dados para comprovarmos tal intuição.
+
+![](./img/grafico_10.png)
+
+A função pd.corr() como expectante informa que há uma correlação fortemente positiva de 0.88 entre quantidade de chutes e quantidade de gols marcados, ou seja, isto significa que o aumento na quantidade de chutes de um time é seguível estatisticamente com o aumento de gols marcados pelo time.
+

@@ -230,3 +230,26 @@ Este gráfico juntamente com o método pd.corr() informam que há uma correlaç�
 
 Tal hipótese de que há uma correlação ou influência direta entre às duas variáveis é descartável com os dados expostos acima.
 
+Antes de finalizarmos tal análise, trarei algumas informações estatísticas que poderão ser auxiliares no conhecimento relativo ao campeonato inglês de 2021-2022.
+
+#### **(12)** Qual foi a média e a mediana de gols por partida do campeonato inglês?
+
+Basicamente, os métodos .mean() e .median() da biblioteca Pandas fornecem rapidamente às respostas para às duas questões estatísticas:
+
+```
+# Verificação da média e da mediana de gols marcados por partida:
+
+print('Média de Gols Por Partida: ', df.total_goals.mean().round(2))
+print('\n')
+print(f'Mediana de Gols Por Partida: {df.total_goals.median()}')
+```
+O código acima informa que 3 gols em média eram marcados aproximadamente em cada partida da Premier League, e semelhantemente à média, a mediana informa que 50 % dos jogos tiveram 3 ou menos que 3 gols marcados por partida, enquanto os demais 50 % foram de jogos com mais de 3 gols marcados.
+
+A média e a mediana informam valores aproximados relativos à quantidade de gols marcados por partida, o histograma junto com à assimetria nos informarão se houve mais jogos com gols marcados acima ou abaixo da média e da mediana de gols por partida.
+
+#### **(13)** Qual foi a frequência de gols por partida do campeonato inglês? 
+
+Um histograma junto com uma linha de distribuição e uma linha que delimite a média de gols por partida serão eficazes para extrairmos informações que respondam a questão acima:
+
+![](./img/grafico_14.png)
+

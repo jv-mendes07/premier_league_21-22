@@ -208,3 +208,25 @@ A pergunta **(9)** visa fornecer mais informações sobre às questões respondi
 
 A função pd.corr() como expectante informa que há uma correlação fortemente positiva de 0.88 entre quantidade de chutes e quantidade de gols marcados, ou seja, isto significa que o aumento na quantidade de chutes de um time é seguível estatisticamente com o aumento de gols marcados pelo time.
 
+Após explorar o tópico relativo à qualidade dos ataques de times do campeonato inglês, considero importante tratar inversamente sobre a qualidade das defesas do campeonato inglês, para termos noção de quais são às piores e as melhores defesas de tal torneio:
+
+#### (10) Quais são os times com às piores defesas do campeonato inglês?
+
+Para saber isto, agrupei os times pela quantidade de gols que cada time sofreu durante todo o campeonato, e consequentemente plotei um gráfico de barras horizontais para obter a resposta de modo intuitivo e visual:
+
+![](./img/grafico_11.png)
+
+É informado graficamente acima que times que terminaram como rebaixados ou quase rebaixados para a próxima divisão foram um dos times com às piores defesas da edição, times como Watford, Leeds e Norwich, já em contrapartida os times que tiveram os melhores ataques e terminaram no topo da tabela do campeonato foram um dos times que tiveram às melhores defesas da edição com menos gols sofridos, times esses como Chelsea, Manchester City e Liverpool corroboram essa afirmação.
+
+No entanto, para nos aprofundarmos em tal tópico, poderemos querer saber se outras variáveis foram influenciáveis ou aumentavam a tendência destes times terem uma péssima defesa ou não:
+
+#### (11) Qual é a correlação entre a quantidade de gols sofridos e a quantidade de faltas cometidas?
+
+Um gráfico de regressão linear será suficiente para responder a questão **(11)** acima:
+
+![](./img/grafico_12.png)
+
+Este gráfico juntamente com o método pd.corr() informam que há uma correlação positivamente moderada entre à variável gols sofridos e faltas cometidas, ou seja, não há uma influência correlacional ou tendência tão evidente de que caso um time cometa mais faltas, logo consequentemente este time sofrerá mais gols. 
+
+Tal hipótese de que há uma correlação ou influência direta entre às duas variáveis é descartável com os dados expostos acima.
+

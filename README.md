@@ -253,3 +253,10 @@ Um histograma junto com uma linha de distribuição e uma linha que delimite a m
 
 ![](./img/grafico_14.png)
 
+Como é observável, há uma frequência incidente maior de jogos que tiveram 2 gols marcados e que estão abaixo da média de gols marcados por partida (ou seja, 3 gols), assim temos a informação de que durante o campeonato inglês houve frequentemente mais jogos com 2 gols marcados do que jogos que tiveram 3 ou mais que 3 gols marcados.
+
+A assimetria de tal distribuição de dados é de 0.38, ou seja, isto novamente confirma que houve uma frequência maior de jogos com um total de gols marcados abaixo da média do que acima da média de gols marcados por partida.
+
+Concluída a resposta destas duas questões, a análise exploratória finaliza-se, no total foram 13 questões respondidas, espero que tal análise tenha sido bastante informativa e esclarecedora sobre a Premier League da edição de 2021-2022.
+
+## ANÁLISE EXPLORATÓRIA FINALIZADA
